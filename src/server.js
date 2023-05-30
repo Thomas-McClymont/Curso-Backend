@@ -15,7 +15,7 @@ app.get("/products", async (req, res) => {
     res.send(await productLimit)
 })
 
-app.get("/products/:pid", async (req, res) => {
+app.get("/products/:id", async (req, res) => {
     let id = parseInt(req.params.id);
     let allProducts = await readProducts;
     let productById = allProducts.find(product => product.id === id);
